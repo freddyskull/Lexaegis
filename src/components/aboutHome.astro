@@ -1,0 +1,93 @@
+---
+import Check from "./svg/check.astro";
+import Scale from "./svg/scale.astro";
+import Graduate from "./svg/graduate.astro";
+import Usercheck from "./svg/usercheck.astro";
+import Cloack from "./svg/cloack.astro";
+import { Image } from "astro:assets";
+import about from "../../public/about-01.jpg";
+import Openbook from "./svg/openbook.astro";
+---
+
+<div class="mx-auto h-[78vh] container" id="about">
+  <div
+    class="items-center grid grid-cols-1 md:grid-cols-3 md:grid-flow-row-dense mt-26"
+  >
+    <div class="order-2 md:order-1 mt-22">
+      <span class="flex items-center gap-2 text-xl italic">
+        <span
+          class="flex justify-center items-center bg-primary rounded-full w-12 h-12"
+        >
+          <Openbook color="#ffff" size={25} />
+        </span>
+        un poco sobre <span class="text-primary">nosotros</span>
+      </span>
+      <h2 class="mt-2 font-bold!">
+        Protege tu negocio. Actúa ahora <span>dentro de la ley</span>
+      </h2>
+      <p class="my-4">
+        En Nuevo León, decenas de empresas pierden millones por fraudes
+        cometidos desde adentro. Si sospechas que alguien está desviando dinero,
+        manipulando cuentas o robando recursos... es momento de actuar.
+      </p>
+      <ul class="">
+        <li class="flex items-center gap-2">
+          <Check /> Te ayudamos a recuperar lo que te pertenece.
+        </li>
+        <li class="flex items-center gap-2">
+          <Check /> No es solo dinero. Es tu empresa en riesgo.
+        </li>
+      </ul>
+
+      <button class="bg-slate-800 mt-6 text-white btn">Saber más</button>
+    </div>
+    <div class="flex justify-center order-1 md:order-2 col-span-2">
+      <Image
+        src={about}
+        class="shadow-2xl rounded-md w-[100%] md:w-[60%]"
+        alt="Sobre nosotros"
+      />
+    </div>
+  </div>
+
+  <div class="gap-6 grid grid-cols-1 md:grid-cols-4 mt-22">
+    <div class="flex gap-6">
+      <div class="">
+        <Scale size={75} />
+      </div>
+      <div>
+        <h4>Resultados comprobados</h4>
+        <p>Hemos resuelto numerosos casos, con resultados contundentes.</p>
+      </div>
+    </div>
+    <div class="flex gap-6">
+      <div>
+        <Graduate size={75} />
+      </div>
+      <div>
+        <h4>Experiencia legal especializada</h4>
+        <p>
+          Años de experiencia protegiendo tus intereses y los de tu empresa.
+        </p>
+      </div>
+    </div>
+    <div class="flex gap-6">
+      <div>
+        <Cloack size={70} />
+      </div>
+      <div>
+        <h4>Atención personalizada</h4>
+        <p>Recibe asesoría y soluciones adaptadas a tus necesidades.</p>
+      </div>
+    </div>
+    <div class="flex gap-6">
+      <div>
+        <Usercheck size={75} />
+      </div>
+      <div>
+        <h4>Confianza reconocida</h4>
+        <p>Premios y reconocimientos avalan nuestro compromiso y excelencia.</p>
+      </div>
+    </div>
+  </div>
+</div>

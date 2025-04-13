@@ -3,12 +3,15 @@ import Button from "./button.astro";
 ---
 
 <div
-  class="relative flex flex-col justify-center items-center bg-[url('/hero.jpg')] bg-cover bg-center h-screen"
+  class="relative flex flex-col justify-center items-center bg-cover bg-center w-[100vw] h-screen"
+  style="background-image: url('/hero3.png'); background-attachment: fixed;"
 >
   <div class="z-0 absolute bg-black/50 w-full h-screen"></div>
-  <div class="z-10 flex flex-col justify-center items-center">
-    <div class="mx-auto text-white text-center container">
-      <span class="text-2xl italic">Solución legal confiable</span>
+  <div class="z-10 flex flex-col justify-center items-center mx-auto container">
+    <div class="mx-auto text-white text-center">
+      <span class="text-slate-300 text-2xl italic"
+        >Solución legal confiable</span
+      >
       <h1 class="mt-4">
         Defensa en casos de <br />
         <span>fraude interno o externo</span>

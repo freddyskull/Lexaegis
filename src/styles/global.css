@@ -3,6 +3,7 @@
 :root {
   --color-primary: #b28e4a;
   --color-seccondary: #1c2639;
+  --color-foreground: #817f7c;
 }
 
 * {
@@ -10,14 +11,20 @@
   font-optical-sizing: auto;
   font-style: normal;
 }
-
+body {
+  font-size: 18px;
+  overflow-x: hidden;
+}
+p {
+  color: var(--color-foreground);
+}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-weight: 500;
+  font-weight: 400;
   font-family: "Playfair", serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -27,7 +34,57 @@ h1 {
   font-size: 5rem;
   line-height: 5.5rem;
 }
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  h5 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  .container {
+    padding: 0px 1rem;
+  }
+}
 h1 > span {
+  font-style: italic;
+  font-weight: bold;
+  color: var(--color-primary);
+  font-family: "Playfair", serif;
+}
+
+h2 {
+  font-size: 2.81rem;
+  line-height: 3.5rem;
+}
+
+h2 > span {
+  font-style: italic;
+  font-weight: bold;
+  color: var(--color-primary);
+  font-family: "Playfair", serif;
+}
+
+h3 {
+  font-size: 1.8rem;
+  line-height: 3.5rem;
+}
+
+h3 > span {
   font-style: italic;
   font-weight: bold;
   color: var(--color-primary);
@@ -61,6 +118,19 @@ h1 > span {
   border: 1px solid var(--color-primary);
   transition: all 0.3s ease-in-out;
 }
+
+.btn {
+  padding: 8px 30px;
+  border-radius: 100px;
+  border: 1px solid var(--color-slate-800);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  transform: translate3d(0px, -3px, 0.01px);
+  background: var(--color-primary);
+  color: white;
+}
 .italic {
   font-style: italic;
 }
@@ -78,9 +148,13 @@ h1 > span {
 
 .nav-bar li a {
   transition: all 0.3s ease-in-out;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .nav-bar li:hover a {
   color: var(--color-primary);
+}
+
+ul li {
+  line-height: 2.5rem;
 }

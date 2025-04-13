@@ -1,6 +1,8 @@
 ---
+import Image from "astro/components/Image.astro";
 import Button from "../components/button.astro";
 import css from "../styles/global.css";
+import logo from "../../public/logo.svg";
 ---
 
 <!doctype html>
@@ -27,21 +29,35 @@ import css from "../styles/global.css";
     <meta name="description" content="A simple Astro project." />
     <meta name="author" content="Your Name" />
     <meta name="keywords" content="Astro, JavaScript, Web Development" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="LexAegis" />
+    <meta property="og:description" content="A simple Astro project." />
+    <meta property="og:image" content="/logo.jpg" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="LexAegis" />
+    <meta name="twitter:description" content="A simple Astro project." />
+    <meta name="twitter:image" content="/logo.jpg" />
   </head>
   <body>
-    <div class="z-10 relative mx-auto container">
+    <div class="z-10 relative">
       <div class="absolute w-full">
         <div
-          class="relative items-center gap-2 grid grid-cols-3 h-42 text-white"
+          class="relative flex justify-between items-center gap-2 md:grid md:grid-cols-3 mx-auto h-42 text-white container"
         >
           <div class="logo">
-            <img
-              src="/logo.svg"
-              alt="Logo"
-              class="top-2 absolute w-auto h-45"
+            <Image
+              src={logo}
+              alt="Logo lexaegis"
+              loading="eager"
+              class="top-2 absolute w-auto h-32 md:h-45"
             />
           </div>
-          <div class="w-full text-center text-nowrap">
+          <div class="hidden md:block w-full text-center text-nowrap">
             <nav class="flex justify-center nav-bar">
               <ul class="flex justify-center gap-2 space-x-4">
                 <li><a href="/">Inicio</a></li>
@@ -51,7 +67,8 @@ import css from "../styles/global.css";
               </ul>
             </nav>
           </div>
-          <div class="text-end">
+          <div class="md:hidden block">menu-movil</div>
+          <div class="hidden md:block text-end">
             <Button> Consulta grátis </Button>
           </div>
         </div>
