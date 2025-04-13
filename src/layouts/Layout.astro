@@ -3,6 +3,7 @@ import Image from "astro/components/Image.astro";
 import Button from "../components/button.astro";
 import css from "../styles/global.css";
 import logo from "../../public/logo.svg";
+const { titlePage } = Astro.props;
 ---
 
 <!doctype html>
@@ -12,7 +13,7 @@ import logo from "../../public/logo.svg";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>LexAegis</title>
+    <title>{titlePage}</title>
     <link rel="stylesheet" href={css} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

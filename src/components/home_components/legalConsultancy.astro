@@ -1,0 +1,46 @@
+---
+import Image from "astro/components/Image.astro";
+import Foldersearch from "../svg/foldersearch.astro";
+import lega from "@public/about2.jpeg";
+---
+
+<div class="bg-secondary mt-12 md:mt-0">
+  <div class="mx-auto text-white container">
+    <div class="gap-4 grid grid-cols-1 md:grid-cols-2">
+      <div class="flex justify-center items-center">
+        <Image
+          src={lega}
+          alt="legal"
+          class="shadow-2xl rounded-md w-auto h-[70%]"
+        />
+      </div>
+      <div class="flex flex-col justify-center items-center">
+        <div class="w-[80%]">
+          <span class="flex items-center gap-2 text-xl italic">
+            <span
+              class="flex justify-center items-center bg-primary rounded-full w-12 h-12"
+            >
+              <!-- <Openbook color="#ffff" size={25} /> -->
+              <Foldersearch color="#ffff" size={25} />
+            </span>
+            Evaluamos tu caso y <span class="text-primary">
+              reunimos pruebas.</span
+            >
+          </span>
+          <h2>Caso real de una <span>empresa protegida</span></h2>
+          <p class="text-slate-300!">
+            Una empresa en <b>Monterrey</b> detectó desvíos de recursos por parte
+            de un gerente. Tras presentar pruebas, se procedió legalmente y el juez
+            ordenó el embargo de una propiedad. Recuperaron más de <b
+              >$800,000</b
+            >
+            pesos en menos de 6 meses.
+          </p>
+          <div class="mt-4">
+            <p class="font-bold text-primary!">Tú también puedes hacerlo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
