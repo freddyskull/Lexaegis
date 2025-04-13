@@ -10,7 +10,10 @@ export default defineConfig({
     plugins: [tailwindcss()],
     resolve: {
       alias: {
-        '@src': resolve('./src') // Define un alias para la carpeta src
+        '@src': resolve('./src'),
+        '@public': resolve('./public'),
+        '@components': resolve('./src/components'),
+        '@svg': resolve('./src/components/svg')
       }
     }
   }
