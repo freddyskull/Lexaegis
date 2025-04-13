@@ -1,0 +1,21 @@
+---
+import Button from "./button.astro";
+---
+
+<div
+  class="relative flex flex-col justify-center items-center bg-[url('/hero.jpg')] bg-cover bg-center h-screen"
+>
+  <div class="z-0 absolute bg-black/50 w-full h-screen"></div>
+  <div class="z-10 flex flex-col justify-center items-center">
+    <div class="mx-auto text-white text-center container">
+      <span class="text-2xl italic">Solución legal confiable</span>
+      <h1 class="mt-4">
+        Defensa en casos de <br />
+        <span>fraude interno o externo</span>
+      </h1>
+    </div>
+    <div class="mt-6 text-white">
+      <Button>información sobre nosotros</Button>
+    </div>
+  </div>
+</div>
