@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #b28e4a;
+  --color-seccondary: #1c2639;
+}
+
+* {
+  font-family: "Jost", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  font-family: "Playfair", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 5.5rem;
+}
+h1 > span {
+  font-style: italic;
+  font-weight: bold;
+  color: var(--color-primary);
+  font-family: "Playfair", serif;
+}
+
+@layer utilities {
+  .bg-primary {
+    background: var(--color-primary);
+  }
+  .border-primary {
+    border-color: var(--color-primary);
+  }
+  .border-secondary {
+    border-color: var(--color-seccondary);
+  }
+  .bg-secondary {
+    color: var(--color-seccondary);
+  }
+  .text-primary {
+    color: var(--color-primary);
+  }
+  .text-secondary {
+    color: var(--color-seccondary);
+  }
+}
+
+.btn-outline {
+  padding: 17px 34px;
+  border-radius: 100px;
+  border: 1px solid var(--color-primary);
+  transition: all 0.3s ease-in-out;
+}
+.italic {
+  font-style: italic;
+}
+.logo > img {
+  transition: all 0.3s ease-in-out;
+}
+.logo:hover > img {
+  transform: translate3d(0px, -3px, 0.01px);
+}
+.btn-outline:hover {
+  transform: translate3d(0px, -3px, 0.01px);
+  background: var(--color-primary);
+  color: white;
+}
+
+.nav-bar li a {
+  transition: all 0.3s ease-in-out;
+  font-size: 20px;
+}
+
+.nav-bar li:hover a {
+  color: var(--color-primary);
+}

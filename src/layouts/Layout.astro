@@ -1,22 +1,64 @@
+---
+import Button from "../components/button.astro";
+import css from "../styles/global.css";
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>LexAegis</title>
+    <link rel="stylesheet" href={css} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="description" content="A simple Astro project." />
+    <meta name="author" content="Your Name" />
+    <meta name="keywords" content="Astro, JavaScript, Web Development" />
+  </head>
+  <body>
+    <div class="z-10 relative mx-auto container">
+      <div class="absolute w-full">
+        <div
+          class="relative items-center gap-2 grid grid-cols-3 h-42 text-white"
+        >
+          <div class="logo">
+            <img
+              src="/logo.svg"
+              alt="Logo"
+              class="top-2 absolute w-auto h-45"
+            />
+          </div>
+          <div class="w-full text-center text-nowrap">
+            <nav class="flex justify-center nav-bar">
+              <ul class="flex justify-center gap-2 space-x-4">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/about">Sobre nosotros</a></li>
+                <li><a href="/contact">Nuestros servicios</a></li>
+                <li><a href="/contact">Contáctenos</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="text-end">
+            <Button> Consulta grátis </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <slot />
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+<style></style>
