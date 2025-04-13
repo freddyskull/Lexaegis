@@ -1,0 +1,23 @@
+---
+export interface Props {
+  size?: number;
+  color?: string;
+}
+
+const { size = 24, color = "#B28E4A" } = Astro.props;
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke={color}
+  stroke-width="1"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="lucide lucide-clock10-icon lucide-clock-10"
+  ><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 8 10"
+  ></polyline></svg
+>
