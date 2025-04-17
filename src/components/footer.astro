@@ -1,0 +1,132 @@
+---
+import Container from "./container.astro";
+import { contact, social_networks as social } from "../const";
+import AngleRigth from "./svg/angleRigth.astro";
+import Image from "astro/components/Image.astro";
+import logo from "../../public/logo.svg";
+---
+
+<div
+  class="bg-slate-600 bg-cover bg-center py-24 md:py-0"
+  style="background-image: url('/bannerFooter.png'); background-attachment: fixed;"
+>
+  <Container class="gap-12 grid grid-cols-1 md:grid-cols-3 py-24 text-white">
+    <div class="col-span-2">
+      <h2>
+        All people are equal before the law.<br />
+        <span>A good attorney</span> is what makes a difference.
+      </h2>
+    </div>
+    <div class="flex items-center gap-4">
+      <div
+        class="flex justify-center items-center bg-primary rounded-full w-12 h-12 text-white"
+      >
+        <span class="text-2xl">I</span>
+      </div>
+      <div>
+        <p class="text-primary text-xl">Get in touch</p>
+        <p class="text-white! text-3xl">123 456 7890</p>
+      </div>
+    </div>
+  </Container>
+</div>
+
+<div class="bg-[#14100C]">
+  <Container>
+    <div
+      class="gap-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-18 text-foreground"
+    >
+      <div>
+        <div
+          class="flex md:flex-row flex-col items-center gap-6 md:text-left text-center"
+        >
+          <Image src={logo} alt="Logo lexaegis" class="w-auto h-42" />
+          <div>
+            <p>
+              Lorem ipsum is simply dummy text of the rinte and type settin in
+              the fermen.
+            </p>
+            <ul
+              class="flex justify-center md:justify-start gap-2 my-8 md:my-0 text-pretty"
+            >
+              {
+                social.map((network) => (
+                  <li>
+                    <a
+                      href={network.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {network.icon && <i class={`icon-${network.icon}`} />} i
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="lg:mx-auto lg:w-[50%]">
+        <h3>Contact</h3>
+        <ul class="text-pretty">
+          {Object.entries(contact).map(([key, value]) => <li>{value}</li>)}
+        </ul>
+      </div>
+      <div class="col-span-1 md:col-span-2 xl:col-span-1 mt-12 md:mt-0">
+        <h3>Subscribe</h3>
+        <p class="text-pretty">
+          Want to be notified about our services. Sign up and we'll send you a
+          notification by email.
+        </p>
+        <form action="">
+          <input type="text" />
+          <div class="right-2 bottom-2 absolute">
+            <button type="submit"><AngleRigth color="white" /></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </Container>
+</div>
+
+<style>
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: white;
+  }
+  form {
+    position: relative;
+  }
+  form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 45px;
+    background: #ac835d;
+    color: #fff;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    top: 25px;
+    right: 10px;
+    border-radius: 100%;
+    outline: none;
+  }
+  input {
+    margin-top: 20px;
+    height: 60px;
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    font-weight: 400;
+    color: #aba59f;
+    outline: none;
+    padding: 0 90px 0 20px;
+    border: 1px solid rgba(145, 118, 90, 0.2);
+    border-radius: 30px;
+  }
+</style>

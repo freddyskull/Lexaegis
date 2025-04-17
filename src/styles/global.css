@@ -4,6 +4,7 @@
   --color-primary: #b28e4a;
   --color-seccondary: #1c2639;
   --color-foreground: #817f7c;
+  --color-marfil: #f7f6f4;
 }
 
 * {
@@ -105,10 +106,16 @@ h3 > span {
     background: var(--color-seccondary);
   }
   .text-primary {
-    color: var(--color-primary);
+    color: var(--color-primary) !important;
   }
   .text-secondary {
     color: var(--color-seccondary);
+  }
+  .text-foreground {
+    color: var(--color-foreground);
+  }
+  .text-marfil {
+    color: var(--color-marfil);
   }
 }
 
@@ -157,4 +164,26 @@ h3 > span {
 
 ul li {
   line-height: 2.5rem;
+}
+
+.card {
+  background: var(--color-marfil);
+  padding: 20px;
+  border-radius: 20px;
+}
+.card .icon {
+  margin: auto;
+  /* width: 50px;
+  height: 50px; */
+  size: 40px;
+  color: var(--color-primary);
+  display: inline-block;
+}
+
+.card-practices {
+  transition: all 0.3s ease-in-out;
+}
+.card-practices:hover {
+  transform: translate3d(0px, -3px, 0.01px);
+  color: white;
 }

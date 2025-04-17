@@ -3,6 +3,7 @@ import Image from "astro/components/Image.astro";
 import Button from "../components/button.astro";
 import css from "../styles/global.css";
 import logo from "../../public/logo.svg";
+import Footer from "../components/footer.astro";
 const { titlePage } = Astro.props;
 ---
 
@@ -76,7 +77,6 @@ const { titlePage } = Astro.props;
       </div>
     </div>
     <slot />
+    <Footer />
   </body>
 </html>
-
-<style></style>
