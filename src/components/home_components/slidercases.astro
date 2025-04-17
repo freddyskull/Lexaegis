@@ -1,0 +1,60 @@
+---
+// filepath: e:\Usuario\Documentos\GitHub\lexaegis\src\components\home_components\slider.astro
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+---
+
+<div class="slider-container">
+  <Swiper
+    spaceBetween={30}
+    slidesPerView={1}
+    navigation={true}
+    pagination={{ clickable: true }}
+    class="mySwiper"
+  >
+    <SwiperSlide>
+      <div class="slide">
+        <img src="/images/marriage.jpg" alt="Marriage & Divorce" />
+        <h3>Marriage & Divorce</h3>
+      </div>
+    </SwiperSlide>
+    <SwiperSlide>
+      <div class="slide">
+        <img src="/images/real-estate.jpg" alt="Real Estate & Construction" />
+        <h3>Real Estate & Construction</h3>
+      </div>
+    </SwiperSlide>
+    <SwiperSlide>
+      <div class="slide">
+        <img src="/images/banking.jpg" alt="Banking & Finance" />
+        <h3>Banking & Finance</h3>
+      </div>
+    </SwiperSlide>
+  </Swiper>
+</div>
+
+<style>
+  .slider-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .slide {
+    text-align: center;
+  }
+
+  .slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .slide h3 {
+    margin-top: 10px;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+</style>

@@ -7,9 +7,10 @@ import Cloack from "@svg/cloack.astro";
 import { Image } from "astro:assets";
 import about from "@public/about4.png";
 import Openbook from "@svg/openbook.astro";
+import Container from "../container.astro";
 ---
 
-<div class="mx-auto py-12 container" id="about">
+<Container>
   <div
     class="items-center grid grid-cols-1 md:grid-cols-3 md:grid-flow-row-dense mt-26"
   >
@@ -50,7 +51,7 @@ import Openbook from "@svg/openbook.astro";
     </div>
   </div>
 
-  <div class="gap-6 grid grid-cols-1 md:grid-cols-4 mt-22">
+  <div class="gap-6 grid grid-cols-1 md:grid-cols-4 mt-22 pb-12">
     <div class="flex gap-6">
       <div class="">
         <Scale size={75} />
@@ -90,4 +91,4 @@ import Openbook from "@svg/openbook.astro";
       </div>
     </div>
   </div>
-</div>
+</Container>

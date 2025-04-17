@@ -1,5 +1,6 @@
 ---
 import Button from "../button.astro";
+import Container from "../container.astro";
 ---
 
 <div
@@ -7,18 +8,20 @@ import Button from "../button.astro";
   style="background-image: url('/hero3.png'); background-attachment: fixed;"
 >
   <div class="z-0 absolute bg-black/50 w-full h-screen"></div>
-  <div class="z-10 flex flex-col justify-center items-center mx-auto container">
-    <div class="mx-auto text-white text-center">
-      <span class="text-slate-300 text-2xl italic"
-        >Solución legal confiable</span
-      >
-      <h1 class="mt-4">
-        Defensa en casos de <br />
-        <span>fraude interno o externo</span>
-      </h1>
+  <Container class="z-10">
+    <div class="flex flex-col justify-center items-center">
+      <div class="mx-auto text-white text-center">
+        <span class="z-10 text-slate-300 text-2xl italic"
+          >Solución legal confiable</span
+        >
+        <h1 class="z-10 mt-4">
+          Defensa en casos de <br />
+          <span>fraude interno o externo</span>
+        </h1>
+      </div>
+      <div class="mt-6 text-white">
+        <Button>información sobre nosotros</Button>
+      </div>
     </div>
-    <div class="mt-6 text-white">
-      <Button>información sobre nosotros</Button>
-    </div>
-  </div>
+  </Container>
 </div>

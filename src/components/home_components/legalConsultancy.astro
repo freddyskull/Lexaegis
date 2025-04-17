@@ -2,10 +2,11 @@
 import Image from "astro/components/Image.astro";
 import Foldersearch from "../svg/foldersearch.astro";
 import lega from "@public/about2.jpeg";
+import Container from "../container.astro";
 ---
 
 <div class="bg-secondary mt-12 md:mt-0">
-  <div class="mx-auto text-white container">
+  <Container class="text-white">
     <div class="gap-4 grid grid-cols-1 md:grid-cols-2">
       <div class="flex justify-center items-center">
         <Image
@@ -16,16 +17,16 @@ import lega from "@public/about2.jpeg";
       </div>
       <div class="flex flex-col justify-center items-center">
         <div class="w-[80%]">
-          <span class="flex items-center gap-2 text-xl italic">
+          <span
+            class="md:inline-flex items-center gap-2 text-xl text-center italic"
+          >
             <span
               class="flex justify-center items-center bg-primary rounded-full w-12 h-12"
             >
-              <!-- <Openbook color="#ffff" size={25} /> -->
               <Foldersearch color="#ffff" size={25} />
             </span>
-            Evaluamos tu caso y <span class="text-primary">
-              reunimos pruebas.</span
-            >
+            Evaluamos tu caso y
+            <span class="text-primary">reunimos pruebas.</span>
           </span>
           <h2>Caso real de una <span>empresa protegida</span></h2>
           <p class="text-slate-300!">
@@ -42,5 +43,5 @@ import lega from "@public/about2.jpeg";
         </div>
       </div>
     </div>
-  </div>
+  </Container>
 </div>

@@ -1,0 +1,71 @@
+---
+import Button from "../button.astro";
+import Container from "../container.astro";
+import Briefcase from "../svg/briefcase.astro";
+import Cloack from "../svg/cloack.astro";
+import Foldersearch from "../svg/foldersearch.astro";
+import Graduate from "../svg/graduate.astro";
+import Usercheck from "../svg/usercheck.astro";
+const items = [
+  {
+    icon: Briefcase,
+    title: "Real Estate Law",
+  },
+  {
+    icon: Graduate,
+    title: "Personal Law",
+  },
+  {
+    icon: Usercheck,
+    title: "Personal Injury",
+  },
+  {
+    icon: Briefcase,
+    title: "Business Law",
+  },
+  {
+    icon: Foldersearch,
+    title: "Education Law",
+  },
+  {
+    icon: Cloack,
+    title: "Criminal Law",
+  },
+];
+---
+
+<Container class="py-24">
+  <div class="gap-12 grid grid-cols-1 md:grid-cols-3">
+    <div class="flex flex-col justify-center w-[80%]">
+      <span>Legal case studies</span>
+      <h2>General <span>&</span> Legal <span>Practice Areas</span></h2>
+      <p class="text-pretty">
+        Lawyer sit amet risus ac duin auctor posuere fanish amet the acinia
+        lecra fermen.
+      </p>
+      <div class="mt-8">
+        <Button>Discover more</Button>
+      </div>
+    </div>
+    <div
+      class="items-center gap-6 grid grid-cols-1 md:grid-cols-3 col-span-2 text-center"
+    >
+      {
+        items.map((item) => {
+          const Icon = item.icon;
+          return (
+            <div class="relative hover:bg-slate-900! py-16! overflow-hidden hover:text-white transition card card-practices">
+              <div class="icon">
+                <Icon size={70} />
+              </div>
+              <h4 class="text-2xl">{item.title}</h4>
+              <div class="-right-10 -bottom-10 absolute opacity-3">
+                <Icon size={180} color="#000" />
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</Container>
