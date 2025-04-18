@@ -85,9 +85,41 @@ import {site} from '../const.ts'
   </head>
   <body>
     <div class="z-10 relative">
+      <div class="absolute w-full">
+        <div
+          class="relative flex justify-between items-center gap-2 md:grid md:grid-cols-3 mx-auto h-42 text-white container"
+        >
+          <div class="logo">
+            <Image
+              src={logo}
+              alt="Logo lexaegis"
+              loading="eager"
+              class="top-2 absolute w-auto h-32 md:h-45"
+            />
+          </div>
+          <div class="hidden md:block w-full text-center text-nowrap">
+            <nav class="flex justify-center nav-bar">
+              <ul class="flex justify-center gap-2 space-x-4">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#nosotros">Sobre nosotros</a></li>
+                <li><a href="#servicios">Nuestros servicios</a></li>
+                <li><a href="#contacto">Contáctenos</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="md:hidden block">menu-movil</div>
+          <div class="hidden md:block text-end">
+            <a href="#contacto">
+              <Button> Consulta grátis </Button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="">
       <slot />
     </div>
-    <Footer />
+    <Footer /> 
   </body>
 </html>
 <style is:global>
