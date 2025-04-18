@@ -11,15 +11,26 @@ import Email from "../svg/email.astro";
         class="bg-[#14100C] shadow-2xl mt-12 md:mt-0 p-10 rounded-md md:w-[70%] text-white text-center"
       >
         <h2>Escríbenos <span>ahora</span></h2>
-        <form action="contact" method="post" data-netlify="true" class="mt-4">
-          <input type="text" placeholder="Nombre completo" />
+        <form action="contact" method="POST" data-netlify="true" class="mt-4">
+          <input name="nombre" type="text" placeholder="Nombre completo" />
           <div class="md:gap-6 grid grid-cols-1 md:grid-cols-2">
-            <input type="text" placeholder="Dirección de correo electrónico" />
-            <input type="text" placeholder="Número de teléfono" />
+            <input
+              name="direccion"
+              type="text"
+              placeholder="Dirección de correo electrónico"
+            />
+            <input
+              name="telefono"
+              type="text"
+              placeholder="Número de teléfono"
+            />
           </div>
           <div class="w-full">
-            <textarea placeholder="Dejanos tu mensaje" rows="6" class="w-full"
-            ></textarea>
+            <textarea
+              name="mensaje"
+              placeholder="Dejanos tu mensaje"
+              rows="6"
+              class="w-full"></textarea>
           </div>
           <div class="w-full">
             <button type="submit" class="py-3! border-[#91765a]! w-full btn"
