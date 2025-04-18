@@ -11,23 +11,20 @@ import Email from "../svg/email.astro";
         class="bg-[#14100C] shadow-2xl mt-12 md:mt-0 p-10 rounded-md md:w-[70%] text-white text-center"
       >
         <h2>Escríbenos <span>ahora</span></h2>
-        <form name="contact" method="POST" netlify>
-          <input name="nombre" type="text" placeholder="Nombre completo" />
+        <!-- <form name="contact" method="POST" netlify> -->
+        <form name="contacto" method="GET" netlify>
+          <input name="name" type="text" placeholder="Nombre completo" />
           <div class="md:gap-6 grid grid-cols-1 md:grid-cols-2">
             <input
-              name="direccion"
+              name="email"
               type="text"
               placeholder="Dirección de correo electrónico"
             />
-            <input
-              name="telefono"
-              type="text"
-              placeholder="Número de teléfono"
-            />
+            <input name="phone" type="text" placeholder="Número de teléfono" />
           </div>
           <div class="w-full">
             <textarea
-              name="mensaje"
+              name="message"
               placeholder="Dejanos tu mensaje"
               rows="6"
               class="w-full"></textarea>
