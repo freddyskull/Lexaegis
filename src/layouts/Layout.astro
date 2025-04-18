@@ -2,6 +2,7 @@
 import Image from "astro/components/Image.astro";
 import Button from "../components/button.astro";
 import logo from "../../public/logo.webp";
+import logoMeta from "../../public/logo.jpg";
 import Footer from "../components/footer.astro";
 const { titlePage } = Astro.props;
 ---
@@ -26,21 +27,30 @@ const { titlePage } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <meta name="description" content="A simple Astro project." />
-    <meta name="author" content="Your Name" />
+    <meta
+      name="description"
+      content="¿Sospechas de fraude dentro de tu empresa? Protege tu negocio. Actúa legalmente contra empleados, socios o directivos desleales."
+    />
+    <!-- <meta name="author" content="Your Name" /> -->
     <meta name="keywords" content="Astro, JavaScript, Web Development" />
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="LexAegis" />
-    <meta property="og:description" content="A simple Astro project." />
+    <meta
+      property="og:description"
+      content="¿Sospechas de fraude dentro de tu empresa? Protege tu negocio. Actúa legalmente contra empleados, socios o directivos desleales."
+    />
     <meta property="og:image" content="/logo.jpg" />
-    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta property="og:url" content="/logo.jpg" />
     <meta property="og:type" content="website" />
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="LexAegis" />
-    <meta name="twitter:description" content="A simple Astro project." />
+    <meta
+      name="twitter:description"
+      content="¿Sospechas de fraude dentro de tu empresa? Protege tu negocio. Actúa legalmente contra empleados, socios o directivos desleales."
+    />
     <meta name="twitter:image" content="/logo.jpg" />
   </head>
   <body>
