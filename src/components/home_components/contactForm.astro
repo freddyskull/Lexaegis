@@ -1,0 +1,67 @@
+---
+import { contact } from "../../const";
+import Container from "../container.astro";
+import Email from "../svg/email.astro";
+---
+
+<div class="bg-gradient-to-b from-white to-[#fff3e8] py-24">
+  <Container>
+    <div class="items-center grid grid-cols-1 md:grid-cols-2">
+      <div
+        class="bg-[#14100C] shadow-2xl mt-12 md:mt-0 p-10 rounded-md md:w-[70%] text-white text-center"
+      >
+        <h2>Escríbenos <span>ahora</span></h2>
+        <form action="" class="mt-4">
+          <input type="text" placeholder="Nombre completo" />
+          <div class="md:gap-6 grid grid-cols-1 md:grid-cols-2">
+            <input type="text" placeholder="Dirección de correo electrónico" />
+            <input type="text" placeholder="Número de teléfono" />
+          </div>
+          <div class="w-full">
+            <textarea placeholder="Dejanos tu mensaje" rows="6" class="w-full"
+            ></textarea>
+          </div>
+          <div class="w-full">
+            <button type="submit" class="py-3! border-[#91765a]! w-full btn"
+              >Enviar mensaje</button
+            >
+          </div>
+        </form>
+      </div>
+      <div>
+        <div class="text-center">
+          <span class="flex justify-center items-center gap-2 text-xl italic">
+            <span
+              class="flex justify-center items-end bg-primary p-2 rounded-full"
+            >
+              <Email color="#ffff" size={25} />
+            </span>
+            Le responderemos <span class="text-primary italic">muy pronto</span>
+          </span>
+          <h2 class="mt-2">
+            ¿Necesitas ayuda?<br />
+            <span>Contacta</span> con nosotros
+          </h2>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          {
+            contact.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div class="flex flex-col justify-center items-center gap-6 mt-6">
+                  {/* <div class="bg-white p-4 rounded-full">
+                    <Icon color="#B28E4A" />
+                  </div> */}
+                  <div class="flex flex-col text-center">
+                    <h4>{item.title}</h4>
+                    <p>{item.label}</p>
+                  </div>
+                </div>
+              );
+            })
+          }
+        </div>
+      </div>
+    </div>
+  </Container>
+</div>

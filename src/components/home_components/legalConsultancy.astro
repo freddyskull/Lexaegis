@@ -5,7 +5,7 @@ import lega from "@public/about2.jpeg";
 import Container from "../container.astro";
 ---
 
-<div class="bg-secondary mt-12 md:mt-0">
+<div class="bg-secondary mt-12 md:mt-0 py-12">
   <Container class="text-white">
     <div class="gap-4 grid grid-cols-1 md:grid-cols-2">
       <div class="flex justify-center items-center">
@@ -16,19 +16,21 @@ import Container from "../container.astro";
         />
       </div>
       <div class="flex flex-col justify-center items-center">
-        <div class="w-[80%]">
+        <div class="md:w-[80%]">
           <span
             class="md:inline-flex items-center gap-2 text-xl text-center italic"
           >
             <span
-              class="flex justify-center items-center bg-primary rounded-full w-12 h-12"
+              class="hidden md:flex justify-center items-center bg-primary p-2 rounded-full"
             >
               <Foldersearch color="#ffff" size={25} />
             </span>
             Evaluamos tu caso y
-            <span class="text-primary">reunimos pruebas.</span>
+            <span class="text-primary italic">reunimos pruebas.</span>
           </span>
-          <h2>Caso real de una <span>empresa protegida</span></h2>
+          <h2 class="text-pretty">
+            Caso real de una <span>empresa protegida</span>
+          </h2>
           <p class="text-slate-300!">
             Una empresa en <b>Monterrey</b> detectó desvíos de recursos por parte
             de un gerente. Tras presentar pruebas, se procedió legalmente y el juez
@@ -38,7 +40,9 @@ import Container from "../container.astro";
             pesos en menos de 6 meses.
           </p>
           <div class="mt-4">
-            <p class="font-bold text-primary!">Tú también puedes hacerlo.</p>
+            <span class="font-bold text-primary!"
+              >Tú también puedes hacerlo.</span
+            >
           </div>
         </div>
       </div>

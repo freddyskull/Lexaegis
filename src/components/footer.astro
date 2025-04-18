@@ -2,6 +2,7 @@
 import Container from "./container.astro";
 import { contact, social_networks as social } from "../const";
 import AngleRigth from "./svg/angleRigth.astro";
+import Phone from "./svg/phone.astro";
 import Image from "astro/components/Image.astro";
 import logo from "../../public/logo.svg";
 ---
@@ -13,19 +14,23 @@ import logo from "../../public/logo.svg";
   <Container class="gap-12 grid grid-cols-1 md:grid-cols-3 py-24 text-white">
     <div class="col-span-2">
       <h2>
-        All people are equal before the law.<br />
-        <span>A good attorney</span> is what makes a difference.
+        Contáctanos hoy mismo<br />
+        <span>Primera evaluación</span> gratuita.
       </h2>
     </div>
     <div class="flex items-center gap-4">
       <div
         class="flex justify-center items-center bg-primary rounded-full w-12 h-12 text-white"
       >
-        <span class="text-2xl">I</span>
+        <span class="text-2xl">
+          <Phone color="#fff" size={30} />
+        </span>
       </div>
       <div>
-        <p class="text-primary text-xl">Get in touch</p>
-        <p class="text-white! text-3xl">123 456 7890</p>
+        <p class="text-primary text-xl">Escríbenos</p>
+        <a href={contact[2].link}>
+          <p class="font-[600] text-white! text-3xl">{contact[2].label}</p>
+        </a>
       </div>
     </div>
   </Container>
@@ -42,38 +47,49 @@ import logo from "../../public/logo.svg";
         >
           <Image src={logo} alt="Logo lexaegis" class="w-auto h-42" />
           <div>
-            <p>
-              Lorem ipsum is simply dummy text of the rinte and type settin in
-              the fermen.
+            <p class="mb-4">
+              Especializado en fraudes empresariales, con abogados expertos en
+              derecho penal y corporativo.
             </p>
             <ul
               class="flex justify-center md:justify-start gap-2 my-8 md:my-0 text-pretty"
             >
               {
-                social.map((network) => (
-                  <li>
-                    <a
-                      href={network.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {network.icon && <i class={`icon-${network.icon}`} />} i
-                    </a>
-                  </li>
-                ))
+                social.map((network) => {
+                  const Icon = network.icon;
+                  return (
+                    <li class="social-icon">
+                      <a
+                        href={network.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Icon color="#fff" />
+                      </a>
+                    </li>
+                  );
+                })
               }
             </ul>
           </div>
         </div>
       </div>
       <div class="lg:mx-auto lg:w-[50%]">
-        <h3>Contact</h3>
+        <h3>Contáctanos</h3>
         <ul class="text-pretty">
-          {Object.entries(contact).map(([key, value]) => <li>{value}</li>)}
+          {
+            contact.map((value: any) => (
+              <li class="contact-link">
+                <a target="_blank" href={value.link}>
+                  {value.label}
+                </a>
+              </li>
+            ))
+          }
         </ul>
       </div>
       <div class="col-span-1 md:col-span-2 xl:col-span-1 mt-12 md:mt-0">
-        <h3>Subscribe</h3>
+        <h3>Suscribete</h3>
         <p class="text-pretty">
           Want to be notified about our services. Sign up and we'll send you a
           notification by email.
@@ -81,7 +97,9 @@ import logo from "../../public/logo.svg";
         <form action="">
           <input type="text" />
           <div class="right-2 bottom-2 absolute">
-            <button type="submit"><AngleRigth color="white" /></button>
+            <button type="submit">
+              <AngleRigth color="white" />
+            </button>
           </div>
         </form>
       </div>
@@ -128,5 +146,22 @@ import logo from "../../public/logo.svg";
     padding: 0 90px 0 20px;
     border: 1px solid rgba(145, 118, 90, 0.2);
     border-radius: 30px;
+  }
+  .social-icon {
+    background: #ac835d;
+    padding: 10px;
+    border-radius: 100px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  .social-icon:hover {
+    transform: translate3d(0px, -3px, 0.01px);
+  }
+  .contact-link {
+    transition: all 0.3s ease-in-out;
+  }
+  .contact-link:hover {
+    color: #ac835d;
+    text-decoration: underline;
   }
 </style>

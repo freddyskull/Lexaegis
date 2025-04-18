@@ -2,53 +2,59 @@
 import Button from "../button.astro";
 import Container from "../container.astro";
 import Briefcase from "../svg/briefcase.astro";
-import Cloack from "../svg/cloack.astro";
-import Foldersearch from "../svg/foldersearch.astro";
 import Graduate from "../svg/graduate.astro";
+import List from "../svg/list.astro";
 import Usercheck from "../svg/usercheck.astro";
 const items = [
   {
     icon: Briefcase,
-    title: "Real Estate Law",
+    title: "Fraudes Empresariales",
   },
   {
     icon: Graduate,
-    title: "Personal Law",
+    title: "Conflictos Legales Empresariales",
   },
   {
     icon: Usercheck,
-    title: "Personal Injury",
+    title: "Créditos Fiscales y Defensa ante el SAT",
   },
   {
     icon: Briefcase,
-    title: "Business Law",
+    title: "Consultoría Preventiva",
   },
-  {
-    icon: Foldersearch,
-    title: "Education Law",
-  },
-  {
-    icon: Cloack,
-    title: "Criminal Law",
-  },
+  // {
+  //   icon: Foldersearch,
+  //   title: "Education Law",
+  // },
+  // {
+  //   icon: Cloack,
+  //   title: "Criminal Law",
+  // },
 ];
 ---
 
-<Container class="py-24">
-  <div class="gap-12 grid grid-cols-1 md:grid-cols-3">
-    <div class="flex flex-col justify-center w-[80%]">
-      <span>Legal case studies</span>
-      <h2>General <span>&</span> Legal <span>Practice Areas</span></h2>
-      <p class="text-pretty">
-        Lawyer sit amet risus ac duin auctor posuere fanish amet the acinia
-        lecra fermen.
+<Container class="mt-24 md:mt-0 py-12">
+  <div class="md:gap-12 grid grid-cols-1 md:grid-cols-3">
+    <div class="flex flex-col justify-center md:w-[80%] text-center">
+      <span class="flex justify-center items-center gap-2 text-xl italic">
+        <span
+          class="flex justify-center items-center bg-primary p-2 rounded-full"
+        >
+          <List color="#ffff" size={25} />
+        </span>
+        Algunos de <span class="text-primary italic">nuestro servicios</span>
+      </span>
+      <h2>Nos especializamos en <span>brindar</span> apoyo</h2>
+      <p class="mt-2 text-pretty">
+        Nos enfocamos en ofrecer soluciones legales personalizadas y efectivas
+        para satisfacer las necesidades específicas de nuestros clientes.
       </p>
-      <div class="mt-8">
+      <!-- <div class="mt-8">
         <Button>Discover more</Button>
-      </div>
+      </div> -->
     </div>
     <div
-      class="items-center gap-6 grid grid-cols-1 md:grid-cols-3 col-span-2 text-center"
+      class="items-center gap-6 grid grid-cols-2 md:grid-cols-2 col-span-2 mt-24 md:mt-0 text-center"
     >
       {
         items.map((item) => {
@@ -58,7 +64,7 @@ const items = [
               <div class="icon">
                 <Icon size={70} />
               </div>
-              <h4 class="text-2xl">{item.title}</h4>
+              <h4 class="text-2xl text-pretty leading-8">{item.title}</h4>
               <div class="-right-10 -bottom-10 absolute opacity-3">
                 <Icon size={180} color="#000" />
               </div>
