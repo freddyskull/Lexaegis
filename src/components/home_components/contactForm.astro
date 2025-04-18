@@ -11,7 +11,7 @@ import Email from "../svg/email.astro";
         class="bg-[#14100C] shadow-2xl mt-12 md:mt-0 p-10 rounded-md md:w-[70%] text-white text-center"
       >
         <h2>Escríbenos <span>ahora</span></h2>
-        <!-- <form action="contact" method="POST" data-netlify="true" class="mt-4">
+        <form name="contact" method="POST" netlify>
           <input name="nombre" type="text" placeholder="Nombre completo" />
           <div class="md:gap-6 grid grid-cols-1 md:grid-cols-2">
             <input
@@ -37,28 +37,6 @@ import Email from "../svg/email.astro";
               >Enviar mensaje</button
             >
           </div>
-        </form> -->
-        <form name="contact" method="POST" netlify>
-          <p>
-            <label>Your Name: <input type="text" name="name" /></label>
-          </p>
-          <p>
-            <label>Your Email: <input type="email" name="email" /></label>
-          </p>
-          <p>
-            <label
-              >Your Role: <select name="role[]" multiple>
-                <option value="leader">Leader</option>
-                <option value="follower">Follower</option>
-              </select></label
-            >
-          </p>
-          <p>
-            <label>Message: <textarea name="message"></textarea></label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
         </form>
       </div>
       <div>
