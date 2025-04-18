@@ -1,9 +1,8 @@
 import Email from "./components/svg/email.astro";
 import Facebook from "./components/svg/facebook.astro";
 import Instagram from "./components/svg/instagram.astro";
-import MapPin from "./components/svg/mapPin.astro";
-import Phone from "./components/svg/phone.astro";
 import Xsocial from "./components/svg/xsocial.astro";
+export const site = "https://lexaegis.com/";
 export const social_networks = [
   {
     name: "Facebook",
