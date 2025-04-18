@@ -2,34 +2,35 @@
 import Button from "../button.astro";
 import Container from "../container.astro";
 import Briefcase from "../svg/briefcase.astro";
-import Graduate from "../svg/graduate.astro";
+import Message from "../svg/message.astro";
+import Mace from "../svg/mace.astro";
 import List from "../svg/list.astro";
 import Usercheck from "../svg/usercheck.astro";
 const items = [
   {
     icon: Briefcase,
     title: "Fraudes Empresariales",
+    description:
+      "Investigación y defensa en casos de fraude interno o externo, Asesoría legal y acompañamiento Recuperación de activos",
   },
   {
-    icon: Graduate,
+    icon: Mace,
     title: "Conflictos Legales Empresariales",
+    description:
+      "Demandas entre socios, contratos incumplidos, defensa ante juicios mercantiles",
   },
   {
     icon: Usercheck,
     title: "Créditos Fiscales y Defensa ante el SAT",
+    description:
+      "Soluciones legales ante adeudos fiscales, defensa ante actos de autoridad (auditorías, multas, embargos), Regularización fiscal y negociaciones con el SAT",
   },
   {
-    icon: Briefcase,
+    icon: Message,
     title: "Consultoría Preventiva",
+    description:
+      "Revisión de contratos y estructura legal, diagnóstico de riesgos legales y fiscales, planeación jurídica para evitar fraudes o problemas con el SAT",
   },
-  // {
-  //   icon: Foldersearch,
-  //   title: "Education Law",
-  // },
-  // {
-  //   icon: Cloack,
-  //   title: "Criminal Law",
-  // },
 ];
 ---
 
@@ -65,6 +66,7 @@ const items = [
                 <Icon size={70} />
               </div>
               <h4 class="text-2xl text-pretty leading-8">{item.title}</h4>
+              <p>{item.description}</p>
               <div class="-right-10 -bottom-10 absolute opacity-3">
                 <Icon size={180} color="#000" />
               </div>

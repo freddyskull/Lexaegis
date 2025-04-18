@@ -5,6 +5,7 @@ import AngleRigth from "./svg/angleRigth.astro";
 import Phone from "./svg/phone.astro";
 import Image from "astro/components/Image.astro";
 import logo from "../../public/logo.webp";
+import Check from "./svg/check.astro";
 ---
 
 <div
@@ -74,7 +75,31 @@ import logo from "../../public/logo.webp";
           </div>
         </div>
       </div>
-      <div class="lg:mx-auto lg:w-[50%]">
+      <div
+        class="col-span-1 md:col-span-2 xl:col-span-1 lg:mx-auto mt-12 md:mt-0"
+      >
+        <h3>¿Por qué elegirnos?</h3>
+        <ul class="">
+          <li class="flex items-center gap-2">
+            <Check /> Experiencia legal especializada
+          </li>
+          <li class="flex items-center gap-2">
+            <Check /> Resultados comprobados
+          </li>
+          <li class="flex items-center gap-2">
+            <Check /> Atención personalizada
+          </li>
+        </ul>
+        <!-- <form action="">
+          <input type="text" />
+          <div class="right-2 bottom-2 absolute">
+            <button type="submit">
+              <AngleRigth color="white" />
+            </button>
+          </div>
+        </form> -->
+      </div>
+      <div class="lg:mx-auto">
         <h3>Contáctanos</h3>
         <ul class="text-pretty">
           {
@@ -87,21 +112,6 @@ import logo from "../../public/logo.webp";
             ))
           }
         </ul>
-      </div>
-      <div class="col-span-1 md:col-span-2 xl:col-span-1 mt-12 md:mt-0">
-        <h3>Suscribete</h3>
-        <p class="text-pretty">
-          Want to be notified about our services. Sign up and we'll send you a
-          notification by email.
-        </p>
-        <form action="">
-          <input type="text" />
-          <div class="right-2 bottom-2 absolute">
-            <button type="submit">
-              <AngleRigth color="white" />
-            </button>
-          </div>
-        </form>
       </div>
     </div>
   </Container>
