@@ -1,7 +1,6 @@
 ---
 import Image from "astro/components/Image.astro";
 import Button from "../components/button.astro";
-import css from "../styles/global.css";
 import logo from "../../public/logo.svg";
 import Footer from "../components/footer.astro";
 const { titlePage } = Astro.props;
@@ -15,7 +14,6 @@ const { titlePage } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{titlePage}</title>
-    <link rel="stylesheet" href={css} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -80,3 +78,255 @@ const { titlePage } = Astro.props;
     <Footer />
   </body>
 </html>
+<style is:global>
+  @import "tailwindcss";
+
+  :root {
+    --color-primary: #b28e4a;
+    --color-seccondary: #1c2639;
+    --color-foreground: #817f7c;
+    --color-marfil: #f7f6f4;
+  }
+
+  * {
+    font-family: "Jost", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  body {
+    font-size: 18px;
+    overflow-x: hidden;
+  }
+  p {
+    color: var(--color-foreground);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 400;
+    font-family: "Playfair", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  h1 {
+    font-size: 5rem;
+    line-height: 5.5rem;
+  }
+  @media screen and (max-width: 550px) {
+    h1 {
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+    h4 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+    h5 {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+    .container {
+      padding: 0px 1rem;
+    }
+  }
+  h1 > span {
+    font-style: italic;
+    font-weight: bold;
+    color: var(--color-primary);
+    font-family: "Playfair", serif;
+  }
+
+  h2 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  h2 > span {
+    font-style: italic;
+    font-weight: bold;
+    color: var(--color-primary);
+    font-family: "Playfair", serif;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    line-height: 3.5rem;
+  }
+
+  h3 > span {
+    font-style: italic;
+    font-weight: bold;
+    color: var(--color-primary);
+    font-family: "Playfair", serif;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  h4 > span {
+    font-style: italic;
+    font-weight: bold;
+    color: var(--color-primary);
+    font-family: "Playfair", serif;
+  }
+
+  @layer utilities {
+    .bg-primary {
+      background: var(--color-primary);
+    }
+    .border-primary {
+      border-color: var(--color-primary);
+    }
+    .border-secondary {
+      border-color: var(--color-seccondary);
+    }
+    .bg-secondary {
+      background: var(--color-seccondary);
+    }
+    .text-primary {
+      color: var(--color-primary) !important;
+    }
+    .text-secondary {
+      color: var(--color-seccondary);
+    }
+    .text-foreground {
+      color: var(--color-foreground);
+    }
+    .text-marfil {
+      color: var(--color-marfil);
+    }
+  }
+
+  .btn-outline {
+    padding: 17px 34px;
+    border-radius: 100px;
+    border: 1px solid var(--color-primary);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btn {
+    padding: 8px 30px;
+    border-radius: 100px;
+    border: 1px solid var(--color-slate-800);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btn:hover {
+    transform: translate3d(0px, -3px, 0.01px);
+    background: var(--color-primary);
+    color: white;
+  }
+  .italic {
+    font-style: italic;
+  }
+  .logo > img {
+    transition: all 0.3s ease-in-out;
+  }
+  .logo:hover > img {
+    transform: translate3d(0px, -3px, 0.01px);
+  }
+  .btn-outline:hover {
+    transform: translate3d(0px, -3px, 0.01px);
+    background: var(--color-primary);
+    color: white;
+  }
+
+  .nav-bar li a {
+    transition: all 0.3s ease-in-out;
+    font-size: 18px;
+  }
+
+  .nav-bar li:hover a {
+    color: var(--color-primary);
+  }
+
+  ul li {
+    line-height: 2.5rem;
+  }
+
+  .card {
+    background: var(--color-marfil);
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .card .icon {
+    margin: auto;
+    /* width: 50px;
+  height: 50px; */
+    size: 40px;
+    color: var(--color-primary);
+    display: inline-block;
+  }
+
+  .card-practices {
+    transition: all 0.3s ease-in-out;
+  }
+  .card-practices:hover {
+    transform: translate3d(0px, -3px, 0.01px);
+    color: white;
+  }
+
+  input,
+  textarea {
+    max-width: 100%;
+    margin-bottom: 20px;
+    padding: 15px;
+    height: auto;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    display: block;
+    width: 100%;
+    line-height: 1.5em;
+    font-family: "Jost", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #817f7c;
+    background-image: none;
+    border-color:
+      ease-in-out 0.15s,
+      box-shadow ease-in-out 0.15s;
+    border: 1px solid #91765a33;
+    border-radius: 6px;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.2rem rgba(178, 142, 74, 0.25);
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--color-foreground);
+    opacity: 1; /* Firefox */
+  }
+  input:-ms-input-placeholder,
+  textarea:-ms-input-placeholder {
+    color: var(--color-foreground);
+  } /* Internet Explorer 10-11 */
+
+  textarea::-ms-input-placeholder {
+    color: var(--color-foreground);
+  } /* Microsoft Edge */
+
+  textarea {
+    width: 100% !important;
+  }
+</style>
