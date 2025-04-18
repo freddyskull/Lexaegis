@@ -13,8 +13,8 @@ import Check from "./svg/check.astro";
   style="background-image: url('/bannerFooter.png'); background-attachment: fixed;"
 >
   <Container class="gap-12 grid grid-cols-1 md:grid-cols-3 py-24 text-white">
-    <div class="col-span-2">
-      <h2>
+    <div class="col-span-2 md:text-left">
+      <h2 class="text-4xl!">
         Contáctanos hoy mismo<br />
         <span>Primera evaluación</span> gratuita.
       </h2>
@@ -30,7 +30,9 @@ import Check from "./svg/check.astro";
       <div>
         <p class="text-primary text-xl">Escríbenos</p>
         <a href={contact[0].link}>
-          <p class="font-[600] text-white! text-3xl">{contact[0].label}</p>
+          <p class="font-[600] text-white! text-2xl md:text-3xl">
+            {contact[0].label}
+          </p>
         </a>
       </div>
     </div>
