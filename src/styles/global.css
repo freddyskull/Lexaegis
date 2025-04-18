@@ -69,7 +69,7 @@ h1 > span {
 }
 
 h2 {
-  font-size: 2.81rem;
+  font-size: 3rem;
   line-height: 3.5rem;
 }
 
@@ -86,6 +86,18 @@ h3 {
 }
 
 h3 > span {
+  font-style: italic;
+  font-weight: bold;
+  color: var(--color-primary);
+  font-family: "Playfair", serif;
+}
+
+h4 {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+h4 > span {
   font-style: italic;
   font-weight: bold;
   color: var(--color-primary);
@@ -186,4 +198,51 @@ ul li {
 .card-practices:hover {
   transform: translate3d(0px, -3px, 0.01px);
   color: white;
+}
+
+input,
+textarea {
+  max-width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  height: auto;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  display: block;
+  width: 100%;
+  line-height: 1.5em;
+  font-family: "Jost", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #817f7c;
+  background-image: none;
+  border-color: ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  border: 1px solid #91765a33;
+  border-radius: 6px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.2rem rgba(178, 142, 74, 0.25);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-foreground);
+  opacity: 1; /* Firefox */
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: var(--color-foreground);
+} /* Internet Explorer 10-11 */
+
+textarea::-ms-input-placeholder {
+  color: var(--color-foreground);
+} /* Microsoft Edge */
+
+textarea {
+  width: 100% !important;
 }
