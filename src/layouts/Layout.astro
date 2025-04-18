@@ -60,16 +60,18 @@ const { titlePage } = Astro.props;
           <div class="hidden md:block w-full text-center text-nowrap">
             <nav class="flex justify-center nav-bar">
               <ul class="flex justify-center gap-2 space-x-4">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/about">Sobre nosotros</a></li>
-                <li><a href="/contact">Nuestros servicios</a></li>
-                <li><a href="/contact">Contáctenos</a></li>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#nosotros">Sobre nosotros</a></li>
+                <li><a href="#servicios">Nuestros servicios</a></li>
+                <li><a href="#contacto">Contáctenos</a></li>
               </ul>
             </nav>
           </div>
           <div class="md:hidden block">menu-movil</div>
           <div class="hidden md:block text-end">
-            <Button> Consulta grátis </Button>
+            <a href="#contacto">
+              <Button> Consulta grátis </Button>
+            </a>
           </div>
         </div>
       </div>
