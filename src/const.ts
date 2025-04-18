@@ -22,23 +22,22 @@ export const social_networks = [
   },
 ];
 export const contact = [
-  {
-    icon: MapPin,
-    title: "dirección",
-    label: "0665 Broadway st. 10234 NY, USA",
-    link: "https://www.google.com/maps/place/0665+Broadway+st.+10234+NY,+USA",
-  },
-
+  // {
+  //   icon: MapPin,
+  //   title: "dirección",
+  //   label: "0665 Broadway st. 10234 NY, USA",
+  //   link: "https://www.google.com/maps/place/0665+Broadway+st.+10234+NY,+USA",
+  // },
   {
     icon: Email,
     title: "Correo",
-    label: "legal@lawdit.com",
-    link: "mailto:legal@lawdit.com",
+    label: "lexaegisasociados@gmail.com",
+    link: "mailto:lexaegisasociados@gmail.com",
   },
-  {
-    icon: Phone,
-    title: "Teléfono",
-    label: "11-2356-789-10",
-    link: "tel:+11235678910",
-  },
+  // {
+  //   icon: Phone,
+  //   title: "Teléfono",
+  //   label: "11-2356-789-10",
+  //   link: "tel:+11235678910",
+  // },
 ];
