@@ -48,10 +48,17 @@ const items = [
 ];
 ---
 
-<Container class="mt-24 md:mt-0 py-12">
+<Container
+  class="mt-24 md:mt-0 py-12"
+  role="region"
+  aria-labelledby="practice-areas-heading"
+>
   <div class="md:gap-12 grid grid-cols-1 md:grid-cols-3">
     <div class="flex flex-col justify-center md:w-[80%] text-center">
-      <span class="flex justify-center items-center gap-2 text-xl italic">
+      <span
+        class="flex justify-center items-center gap-2 text-xl italic"
+        aria-hidden="true"
+      >
         <span
           class="flex justify-center items-center bg-primary p-2 rounded-full"
         >
@@ -59,7 +66,9 @@ const items = [
         </span>
         Algunos de <span class="text-primary italic">nuestro servicios</span>
       </span>
-      <h2>Nos especializamos en <span>brindar</span> apoyo</h2>
+      <h2 id="practice-areas-heading">
+        Nos especializamos en <span>brindar</span> apoyo
+      </h2>
       <p class="mt-2 text-pretty">
         Nos enfocamos en ofrecer soluciones legales personalizadas y efectivas
         para satisfacer las necesidades específicas de nuestros clientes.
@@ -70,18 +79,25 @@ const items = [
     </div>
     <div
       class="items-center gap-6 grid grid-cols-1 md:grid-cols-3 col-span-2 mt-24 md:mt-0 text-center"
+      role="list"
     >
       {
         items.map((item) => {
           const Icon = item.icon;
           return (
-            <div class="relative hover:bg-slate-900! py-16! overflow-hidden hover:text-white transition card card-practices">
-              <div class="icon">
+            <div
+              class="relative hover:bg-slate-900! py-16! overflow-hidden hover:text-white transition card card-practices"
+              role="listitem"
+            >
+              <div class="icon" aria-hidden="true">
                 <Icon size={70} />
               </div>
               <h4 class="text-2xl text-pretty leading-8">{item.title}</h4>
               <p>{item.description}</p>
-              <div class="-right-10 -bottom-10 absolute opacity-3">
+              <div
+                class="-right-10 -bottom-10 absolute opacity-3"
+                aria-hidden="true"
+              >
                 <Icon size={180} color="#000" />
               </div>
             </div>

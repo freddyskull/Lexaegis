@@ -10,29 +10,57 @@ import Email from "../svg/email.astro";
       <div
         class="bg-[#14100C] shadow-2xl mt-12 md:mt-0 p-10 rounded-md md:w-[70%] text-white text-center"
       >
-        <h2>Escríbenos <span>ahora</span></h2>
-        <!-- <form name="contact" method="POST" netlify> -->
-        <form name="contacto" method="POST" netlify>
-          <input name="name" type="text" placeholder="Nombre completo" />
+        <form
+          name="contacto"
+          method="POST"
+          netlify
+          aria-labelledby="form-title"
+        >
+          <h2 id="form-title">Escríbenos <span>ahora</span></h2>
+          <label for="name">Nombre completo</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Nombre completo"
+            aria-required="true"
+          />
           <div class="md:gap-6 grid grid-cols-1 md:grid-cols-2">
+            <label for="email">Dirección de correo electrónico</label>
             <input
+              id="email"
               name="email"
-              type="text"
+              type="email"
               placeholder="Dirección de correo electrónico"
+              aria-required="true"
             />
-            <input name="phone" type="text" placeholder="Número de teléfono" />
+            <label for="phone">Número de teléfono</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              placeholder="Número de teléfono"
+              aria-required="false"
+            />
           </div>
           <div class="w-full">
+            <label for="message">Dejanos tu mensaje</label>
             <textarea
+              id="message"
               name="message"
               placeholder="Dejanos tu mensaje"
               rows="6"
-              class="w-full"></textarea>
+              class="w-full"
+              aria-required="true"></textarea>
           </div>
           <div class="w-full">
-            <button type="submit" class="py-3! border-[#91765a]! w-full btn"
-              >Enviar mensaje</button
+            <button
+              type="submit"
+              class="py-3! border-[#91765a]! w-full btn"
+              aria-label="Enviar mensaje"
             >
+              Enviar mensaje
+            </button>
           </div>
         </form>
       </div>
@@ -42,7 +70,7 @@ import Email from "../svg/email.astro";
             <span
               class="flex justify-center items-end bg-primary p-2 rounded-full"
             >
-              <Email color="#ffff" size={25} />
+              <Email color="#ffff" size={25} aria-hidden="true" />
             </span>
             Le responderemos <span class="text-primary italic">muy pronto</span>
           </span>
@@ -54,15 +82,11 @@ import Email from "../svg/email.astro";
         <div class="flex flex-col justify-center items-center">
           {
             contact.map((item) => {
-              const Icon = item.icon;
               return (
                 <div class="flex flex-col justify-center items-center gap-6 mt-6">
-                  {/* <div class="bg-white p-4 rounded-full">
-                    <Icon color="#B28E4A" />
-                  </div> */}
                   <div class="flex flex-col text-center">
                     <h4>{item.title}</h4>
-                    <p>{item.label}</p>
+                    <p id={`contact-${item.title}`}>{item.label}</p>
                   </div>
                 </div>
               );

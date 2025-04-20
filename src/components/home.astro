@@ -9,15 +9,18 @@ import ContactForm from "./home_components/contactForm.astro";
 ---
 
 <Hero />
-<div id="nosotros">
+<section id="nosotros" aria-labelledby="nosotros-heading">
+  <h2 id="nosotros-heading" class="sr-only">Sobre Nosotros</h2>
   <AboutHome />
-</div>
+</section>
 <LegalConsultancy />
 <!-- <Studycase /> -->
 <BannerHome />
-<div id="servicios">
+<section id="servicios" aria-labelledby="servicios-heading">
+  <h2 id="servicios-heading" class="sr-only">Nuestros Servicios</h2>
   <PracticeAreas />
-</div>
-<div id="contacto">
+</section>
+<section id="contacto" aria-labelledby="contacto-heading">
+  <h2 id="contacto-heading" class="sr-only">Contáctanos</h2>
   <ContactForm />
-</div>
+</section>

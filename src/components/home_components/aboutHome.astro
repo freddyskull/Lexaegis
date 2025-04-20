@@ -5,7 +5,7 @@ import Graduate from "@svg/graduate.astro";
 import Usercheck from "@svg/usercheck.astro";
 import Cloack from "@svg/cloack.astro";
 import { Image } from "astro:assets";
-import about from "@public/about4.png";
+import about from "@public/about4.webp";
 import Openbook from "@svg/openbook.astro";
 import Container from "../container.astro";
 ---
@@ -13,15 +13,20 @@ import Container from "../container.astro";
 <Container>
   <div
     class="items-center grid grid-cols-1 md:grid-cols-3 md:grid-flow-row-dense mt-26"
+    role="region"
+    aria-labelledby="about-us-heading"
   >
     <div class="order-2 md:order-1 mt-22">
       <span class="flex items-center gap-2 text-xl italic">
         <span
           class="flex justify-center items-center bg-primary p-2 rounded-full"
+          aria-hidden="true"
         >
           <Openbook color="#ffff" size={25} />
         </span>
-        un poco sobre <span class="text-primary italic">nosotros</span>
+        <span id="about-us-heading"
+          >un poco sobre <span class="text-primary italic">nosotros</span></span
+        >
       </span>
       <h2 class="mt-2 font-bold!">
         Protege tu negocio. Actúa ahora <span>dentro de la ley</span>
@@ -31,12 +36,14 @@ import Container from "../container.astro";
         expertos en derecho penal y corporativo. Llevamos años ayudando a
         empresarios a recuperar su dinero y proteger su negocio.
       </p>
-      <ul class="">
+      <ul class="pl-5 list-disc">
         <li class="flex items-center gap-2">
-          <Check /> Te ayudamos a recuperar lo que te pertenece.
+          <Check aria-hidden="true" />
+          <span>Te ayudamos a recuperar lo que te pertenece.</span>
         </li>
         <li class="flex items-center gap-2">
-          <Check /> No es solo dinero. Es tu empresa en riesgo.
+          <Check aria-hidden="true" />
+          <span>No es solo dinero. Es tu empresa en riesgo.</span>
         </li>
       </ul>
 
@@ -46,14 +53,19 @@ import Container from "../container.astro";
       <Image
         src={about}
         class="shadow-2xl rounded-md w-[100%] md:w-[60%]"
-        alt="Sobre nosotros"
+        alt="Imagen representativa sobre nosotros"
       />
     </div>
   </div>
 
-  <div class="gap-6 grid grid-cols-1 md:grid-cols-4 mt-22 pb-12">
+  <div
+    class="gap-6 grid grid-cols-1 md:grid-cols-4 mt-22 pb-12"
+    role="region"
+    aria-labelledby="features-heading"
+  >
+    <h3 id="features-heading" class="sr-only">Características principales</h3>
     <div class="flex gap-6">
-      <div class="">
+      <div class="" aria-hidden="true">
         <Scale size={75} />
       </div>
       <div>
@@ -62,7 +74,7 @@ import Container from "../container.astro";
       </div>
     </div>
     <div class="flex gap-6">
-      <div>
+      <div aria-hidden="true">
         <Graduate size={75} />
       </div>
       <div>
@@ -73,7 +85,7 @@ import Container from "../container.astro";
       </div>
     </div>
     <div class="flex gap-6">
-      <div>
+      <div aria-hidden="true">
         <Cloack size={70} />
       </div>
       <div>
@@ -82,7 +94,7 @@ import Container from "../container.astro";
       </div>
     </div>
     <div class="flex gap-6">
-      <div>
+      <div aria-hidden="true">
         <Usercheck size={75} />
       </div>
       <div>

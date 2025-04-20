@@ -1,7 +1,7 @@
 ---
 import Image from "astro/components/Image.astro";
 import Foldersearch from "../svg/foldersearch.astro";
-import lega from "@public/about2.jpeg";
+import lega from "@public/about2.webp";
 import Container from "../container.astro";
 ---
 
@@ -11,7 +11,7 @@ import Container from "../container.astro";
       <div class="flex justify-center items-center">
         <Image
           src={lega}
-          alt="legal"
+          alt="Imagen representativa de servicios legales, mostrando un caso exitoso"
           class="shadow-2xl rounded-md w-auto h-[70%]"
         />
       </div>
@@ -19,19 +19,26 @@ import Container from "../container.astro";
         <div class="md:w-[80%]">
           <span
             class="md:inline-flex items-center gap-2 text-xl text-center italic"
+            role="text"
+            aria-label="Evaluamos tu caso y reunimos pruebas"
           >
             <span
               class="hidden md:flex justify-center items-center bg-primary p-2 rounded-full"
+              aria-hidden="true"
             >
               <Foldersearch color="#ffff" size={25} />
             </span>
             Evaluamos tu caso y
             <span class="text-primary italic">reunimos pruebas.</span>
           </span>
-          <h2 class="text-pretty">
+          <h2 class="text-pretty" role="heading" aria-level="2">
             Caso real de una <span>empresa protegida</span>
           </h2>
-          <p class="text-slate-300!">
+          <p
+            class="text-slate-300!"
+            role="article"
+            aria-label="Descripción de un caso real exitoso"
+          >
             Una empresa en <b>Monterrey</b> detectó desvíos de recursos por parte
             de un gerente. Tras presentar pruebas, se procedió legalmente y el juez
             ordenó el embargo de una propiedad. Recuperaron más de <b
@@ -40,9 +47,13 @@ import Container from "../container.astro";
             pesos en menos de 6 meses.
           </p>
           <div class="mt-4">
-            <span class="font-bold text-primary!"
-              >Tú también puedes hacerlo.</span
+            <span
+              class="font-bold text-primary!"
+              role="text"
+              aria-label="Mensaje motivacional"
             >
+              Tú también puedes hacerlo.
+            </span>
           </div>
         </div>
       </div>

@@ -1,27 +1,33 @@
 ---
 import Container from "../container.astro";
 import Foldersearch from "../svg/foldersearch.astro";
-import Slidercases from "./slidercases.astro";
 ---
 
 <Container class="py-12">
   <div class="relative grid grid-cols-1 md:grid-cols-2" id="study-case">
-    <div class="flex items-center min-h-[600px]">
+    <div
+      class="flex items-center min-h-[600px]"
+      role="region"
+      aria-labelledby="study-case-title"
+    >
       <div class="w-[58%]">
         <span
           class="md:inline-flex items-center gap-2 text-xl text-center italic"
+          aria-label="Evaluamos tu caso y reunimos pruebas"
         >
           <span
             class="flex justify-center items-center bg-primary rounded-full w-12 h-12"
+            role="img"
+            aria-label="Ícono de búsqueda en carpeta"
           >
             <Foldersearch color="#ffff" size={25} />
           </span>
-          Evaluamos tu caso y reunios pruebas
+          Evaluamos tu caso y reunimos pruebas
         </span>
-        <h2>Casos de <span>estudios</span></h2>
+        <h2 id="study-case-title">Casos de <span>estudios</span></h2>
         <p>
-          Lawyer sit amet risus ac duin auctor posuere fanish amet the acinia
-          lecra fermen.
+          Nuestros abogados analizan tu caso y recopilan las pruebas necesarias
+          para construir una defensa sólida.
         </p>
       </div>
     </div>
