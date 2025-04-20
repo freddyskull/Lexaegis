@@ -116,7 +116,25 @@ import {site} from '../const.ts'
         </div>
       </div>
     </div>
-    <div class="">
+    <div class="">    <!-- Meta etiquetas adicionales -->
+    <meta name="theme-color" content="#b28e4a" />
+    <meta name="application-name" content="LexAegis" />
+    <meta name="apple-mobile-web-app-title" content="LexAegis" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <!-- Meta etiquetas de seguridad -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline';" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- Meta etiquetas de rendimiento -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="preload" href="/path/to/critical.css" as="style" />
+    <link rel="preload" href="/path/to/critical.js" as="script" />
       <slot />
     </div>
     <Footer /> 

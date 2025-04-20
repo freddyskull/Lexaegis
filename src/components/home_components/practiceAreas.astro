@@ -6,12 +6,26 @@ import Message from "../svg/message.astro";
 import Mace from "../svg/mace.astro";
 import List from "../svg/list.astro";
 import Usercheck from "../svg/usercheck.astro";
+import House from "../svg/house.astro";
+import Scroll from "../svg/scroll.astro";
 const items = [
   {
     icon: Briefcase,
     title: "Fraudes Empresariales",
     description:
       "Investigación y defensa en casos de fraude interno o externo, Asesoría legal y acompañamiento Recuperación de activos",
+  },
+  {
+    icon: House,
+    title: "Fideicomisos",
+    description:
+      "Asesoría integral en fideicomisos para protección de activos, seguridad jurídica y cumplimiento de objetivos específicos con un enfoque estratégico.",
+  },
+  {
+    icon: Message,
+    title: "Consultoría Preventiva",
+    description:
+      "Revisión de contratos y estructura legal, diagnóstico de riesgos legales y fiscales, planeación jurídica para evitar fraudes o problemas con el SAT",
   },
   {
     icon: Mace,
@@ -26,10 +40,10 @@ const items = [
       "Soluciones legales ante adeudos fiscales, defensa ante actos de autoridad (auditorías, multas, embargos), Regularización fiscal y negociaciones con el SAT",
   },
   {
-    icon: Message,
-    title: "Consultoría Preventiva",
+    icon: Scroll,
+    title: "Herencias Accionarias y Sucesión Empresarial",
     description:
-      "Revisión de contratos y estructura legal, diagnóstico de riesgos legales y fiscales, planeación jurídica para evitar fraudes o problemas con el SAT",
+      "Asesoramos en la transmisión de empresas familiares, garantizando una transición ordenada y protegiendo el legado empresarial.",
   },
 ];
 ---
@@ -55,7 +69,7 @@ const items = [
       </div> -->
     </div>
     <div
-      class="items-center gap-6 grid grid-cols-1 md:grid-cols-2 col-span-2 mt-24 md:mt-0 text-center"
+      class="items-center gap-6 grid grid-cols-1 md:grid-cols-3 col-span-2 mt-24 md:mt-0 text-center"
     >
       {
         items.map((item) => {
