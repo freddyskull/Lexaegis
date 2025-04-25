@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets";
+import LayoutServices from "../layouts/LayoutServices.astro";
+import service from "@public/service3.png";
+import Home from "../components/svg/house.astro";
+---
+
+<LayoutServices
+  title="Regularización de propiedades"
+  titlePage="Lexaegis | Regularización de propiedades"
+>
+  <div
+    class="items-center gap-12 grid grid-cols-1 md:grid-cols-2 md:grid-flow-row-dense"
+    role="region"
+    aria-labelledby="service-heading"
+  >
+    <div class="order-2 md:order-1">
+      <span class="flex items-center gap-2 text-xl italic">
+        <span
+          class="flex justify-center items-center bg-primary p-2 rounded-full"
+          aria-hidden="true"
+        >
+          <Home color="#ffff" size={25} />
+        </span>
+        <span id="service-heading">
+          Regularización <span class="text-primary italic">de propiedades</span>
+        </span>
+      </span>
+      <h2 class="mt-2 font-bold! text-pretty">
+        Regularización de <span>propiedades</span>
+      </h2>
+      <p class="my-4">
+        En Lexaegis, entendemos la importancia de mantener tus propiedades en
+        regla para garantizar la estabilidad y el crecimiento de tu empresa.
+        Nuestro servicio de regularización de propiedades está diseñado para
+        ayudarte a resolver cualquier situación legal o administrativa que pueda
+        estar afectando tus activos. Ya sea que necesites actualizar escrituras,
+        resolver conflictos de propiedad o gestionar trámites pendientes,
+        nuestro equipo de expertos está aquí para brindarte soluciones rápidas y
+        efectivas. Protege lo que es tuyo y asegura el futuro de tu negocio con
+        nuestra asesoría especializada.
+      </p>
+      <!-- <ul class="pl-5 list-disc">
+        <li class="flex items-center gap-2">
+          <Check aria-hidden="true" />
+          <span>Te ayudamos a recuperar lo que te pertenece.</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <Check aria-hidden="true" />
+          <span>No es solo dinero. Es tu empresa en riesgo.</span>
+        </li>
+      </ul> -->
+
+      <a href="/#contacto">
+        <button class="bg-slate-800 mt-6 text-white btn">Me interesa</button>
+      </a>
+    </div>
+    <div class="flex order-1 md:order-2">
+      <Image
+        src={service}
+        class="shadow-2xl rounded-md w-[100%]"
+        alt="Imagen representativa sobre servicio"
+      />
+    </div>
+  </div>
+</LayoutServices>

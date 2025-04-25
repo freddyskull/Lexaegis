@@ -1,0 +1,65 @@
+---
+import { Image } from "astro:assets";
+import LayoutServices from "../layouts/LayoutServices.astro";
+import service from "@public/service2.png";
+import Scroll from "../components/svg/scroll.astro";
+---
+
+<LayoutServices
+  title="contratos de compraventa"
+  titlePage="Lexaegis | Revisión y elaboración de contratos de compraventa"
+>
+  <div
+    class="items-center gap-12 grid grid-cols-1 md:grid-cols-2 md:grid-flow-row-dense"
+    role="region"
+    aria-labelledby="service-heading"
+  >
+    <div class="order-2 md:order-1">
+      <span class="flex items-center gap-2 text-xl italic">
+        <span
+          class="flex justify-center items-center bg-primary p-2 rounded-full"
+          aria-hidden="true"
+        >
+          <Scroll color="#ffff" size={25} />
+        </span>
+        <span id="service-heading"
+          >asesoría <span class="text-primary italic">legal especializada</span
+          ></span
+        >
+      </span>
+      <h2 class="mt-2 font-bold! text-pretty">
+        Asesoría en <span>compra, renta o venta</span> de inmuebles
+      </h2>
+      <p class="my-4">
+        En Lexaegis, ofrecemos asesoría legal especializada en la revisión y
+        elaboración de contratos de compraventa. Nuestro equipo de expertos te
+        acompaña en cada paso del proceso, asegurando que tus intereses estén
+        protegidos y que las transacciones se realicen de manera segura y
+        transparente. Ya sea que estés comprando, vendiendo o rentando un
+        inmueble, estamos aquí para ayudarte a tomar decisiones informadas y
+        respaldadas legalmente.
+      </p>
+      <!-- <ul class="pl-5 list-disc">
+        <li class="flex items-center gap-2">
+          <Check aria-hidden="true" />
+          <span>Te ayudamos a recuperar lo que te pertenece.</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <Check aria-hidden="true" />
+          <span>No es solo dinero. Es tu empresa en riesgo.</span>
+        </li>
+      </ul> -->
+
+      <a href="/#contacto">
+        <button class="bg-slate-800 mt-6 text-white btn">Me interesa</button>
+      </a>
+    </div>
+    <div class="flex order-1 md:order-2">
+      <Image
+        src={service}
+        class="shadow-2xl rounded-md w-[100%]"
+        alt="Imagen representativa sobre servicio"
+      />
+    </div>
+  </div>
+</LayoutServices>

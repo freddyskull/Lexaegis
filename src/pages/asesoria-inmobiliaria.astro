@@ -1,0 +1,72 @@
+---
+import { Image } from "astro:assets";
+import LayoutServices from "../layouts/LayoutServices.astro";
+import service from "@public/service5.png";
+import Briefcase from "../components/svg/briefcase.astro";
+---
+
+<LayoutServices
+  title="Asesoría inversiones inmobiliarias"
+  titlePage="Lexaegis | Asesoría en inversiones inmobiliarias con enfoque empresarial"
+>
+  <div
+    class="items-center gap-12 grid grid-cols-1 md:grid-cols-2 md:grid-flow-row-dense"
+    role="region"
+    aria-labelledby="service-heading"
+  >
+    <div class="order-2 md:order-1">
+      <span class="flex items-center gap-2 text-xl italic">
+        <span
+          class="flex justify-center items-center bg-primary p-2 rounded-full"
+          aria-hidden="true"
+        >
+          <Briefcase color="#ffff" size={25} />
+        </span>
+        <span id="service-heading"
+          >asesoría <span class="text-primary italic">legal especializada</span
+          ></span
+        >
+      </span>
+
+      <h2 class="mt-2 font-bold! text-pretty">
+        Asesoría en <span>inversiones</span> inmobiliarias con enfoque <span
+          >empresarial</span
+        >
+      </h2>
+      <p class="my-4">
+        Nuestro enfoque está diseñado específicamente para empresas que buscan
+        maximizar el valor de sus inversiones inmobiliarias mientras minimizan
+        riesgos legales y financieros. Ofrecemos un análisis exhaustivo de cada
+        oportunidad de inversión, evaluando aspectos legales, fiscales y
+        estratégicos para garantizar que cada decisión esté respaldada por
+        información precisa y confiable.
+      </p>
+      <p class="mb-4">
+        Además, proporcionamos asesoramiento en la estructuración de
+        transacciones inmobiliarias, incluyendo la negociación de contratos, la
+        revisión de documentación legal y la gestión de procesos regulatorios.
+        Nuestro equipo combina experiencia jurídica con un profundo conocimiento
+        del mercado inmobiliario, lo que nos permite ofrecer soluciones
+        innovadoras y adaptadas a las necesidades específicas de tu empresa.
+      </p>
+      <p>
+        Ya sea que estés adquiriendo, vendiendo o gestionando propiedades,
+        nuestro objetivo es proteger tus intereses y ayudarte a alcanzar tus
+        metas empresariales. Con Lexaegis, puedes confiar en un aliado
+        estratégico que entiende la complejidad del sector inmobiliario y está
+        comprometido con el éxito de tu negocio.
+      </p>
+
+      <a href="/#contacto">
+        <button class="bg-slate-800 mt-6 text-white btn">Me interesa</button>
+      </a>
+    </div>
+    <div class="flex order-1 md:order-2">
+      <Image
+        src={service}
+        class="shadow-2xl rounded-md w-[100%]"
+        alt="Imagen representativa sobre servicio"
+      />
+    </div>
+  </div>
+</LayoutServices>

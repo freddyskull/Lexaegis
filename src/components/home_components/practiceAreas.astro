@@ -1,5 +1,4 @@
 ---
-import Button from "../button.astro";
 import Container from "../container.astro";
 import Briefcase from "../svg/briefcase.astro";
 import Message from "../svg/message.astro";
@@ -8,6 +7,8 @@ import List from "../svg/list.astro";
 import Usercheck from "../svg/usercheck.astro";
 import House from "../svg/house.astro";
 import Scroll from "../svg/scroll.astro";
+import Scale from "../svg/scale.astro";
+import HandsShake from "../svg/handsShake.astro";
 const items = [
   {
     icon: Briefcase,
@@ -46,15 +47,118 @@ const items = [
       "Asesoramos en la sucesión de empresas familiares, garantizando una transición ordenada y protegiendo el legado empresarial.",
   },
 ];
+
+const itemsSection2 = [
+  {
+    icon: Briefcase,
+    title: "Asesoría en inversiones inmobiliarias con enfoque empresarial",
+    hidden: false,
+    link: "asesoria-inmobiliaria",
+  },
+
+  {
+    icon: Scroll,
+    title:
+      "Revisión y elaboración de contratos de compraventa, arrendamiento o cesión",
+    hidden: false,
+    link: "/contratos-compra-venta",
+  },
+  {
+    icon: House,
+    title: "Regularización de propiedades",
+    hidden: false,
+    link: "/regularizacion-propiedades",
+  },
+  {
+    icon: Mace,
+    title: "Defensa en conflictos por posesión, uso o propiedad",
+    hidden: false,
+    link: "posesion-uso-propiedad",
+  },
+  {
+    icon: Mace,
+    title: "",
+    hidden: true,
+    link: "#",
+  },
+  {
+    icon: HandsShake,
+    title: "Asesoría en compra, renta o venta de inmuebles",
+    hidden: false,
+    link: "/asesoria-compra-venta",
+  },
+];
 ---
 
-<Container
-  class="mt-24 md:mt-0 py-12"
-  role="region"
-  aria-labelledby="practice-areas-heading"
->
-  <div class="md:gap-12 grid grid-cols-1 md:grid-cols-3">
-    <div class="flex flex-col justify-center md:w-[80%] text-center">
+<div class="bg-[#FEF3E8] py-12">
+  <Container
+    class="mt-24 md:mt-0 py-12"
+    role="region"
+    aria-labelledby="practice-areas-heading"
+  >
+    <div class="flex flex-col-reverse md:gap-12 md:grid md:grid-cols-3">
+      <div
+        class="items-center gap-6 grid grid-cols-1 md:grid-cols-3 col-span-2 mt-24 md:mt-0 text-center"
+        role="list"
+      >
+        {
+          items.map((item) => {
+            const Icon = item.icon;
+            return (
+              <div
+                class="relative shadow-md py-16! overflow-hidden card"
+                role="listitem"
+              >
+                <div class="icon" aria-hidden="true">
+                  <Icon size={70} />
+                </div>
+                <h4 class="text-2xl text-pretty leading-8">{item.title}</h4>
+                <p>{item.description}</p>
+                <div
+                  class="-right-10 -bottom-10 absolute opacity-3"
+                  aria-hidden="true"
+                >
+                  <Icon size={180} color="#000" />
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+      <div class="flex justify-end items-center">
+        <div class="bg-white shadow-md p-6 rounded-md">
+          <div class="flex flex-col justify-center text-center">
+            <span
+              class="flex justify-center items-center gap-2 text-xl italic"
+              aria-hidden="true"
+            >
+              <span
+                class="flex justify-center items-center bg-primary p-2 rounded-full"
+              >
+                <List color="#ffff" size={25} />
+              </span>
+              Algunos de <span class="text-primary italic"
+                >nuestro servicios</span
+              >
+            </span>
+            <h2 id="practice-areas-heading">
+              Nos especializamos en <span>brindar</span> apoyo
+            </h2>
+            <p class="mt-2 text-pretty">
+              Nos enfocamos en ofrecer soluciones legales personalizadas y
+              efectivas para satisfacer las necesidades específicas de nuestros
+              clientes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</div>
+
+<Container>
+  <div class="md:gap-12 grid grid-cols-1 md:grid-cols-3 mt-24">
+    <div class="flex flex-col justify-center text-center">
       <span
         class="flex justify-center items-center gap-2 text-xl italic"
         aria-hidden="true"
@@ -62,45 +166,49 @@ const items = [
         <span
           class="flex justify-center items-center bg-primary p-2 rounded-full"
         >
-          <List color="#ffff" size={25} />
+          <Scale color="#ffff" size={25} />
         </span>
-        Algunos de <span class="text-primary italic">nuestro servicios</span>
+        respaldo <span class="text-primary italic">jurídico sólido</span>
       </span>
       <h2 id="practice-areas-heading">
-        Nos especializamos en <span>brindar</span> apoyo
+        Protección <span>estratégica</span> para tus intereses.
       </h2>
       <p class="mt-2 text-pretty">
-        Nos enfocamos en ofrecer soluciones legales personalizadas y efectivas
-        para satisfacer las necesidades específicas de nuestros clientes.
+        Ya sea que tu empresa esté expandiendo operaciones, consolidando
+        patrimonio o iniciando un proyecto inmobiliario, en LexAegis protegemos
+        tus intereses con la misma precisión y enfoque estratégico que nos
+        caracteriza en el ámbito corporativo.
       </p>
       <!-- <div class="mt-8">
-        <Button>Discover more</Button>
-      </div> -->
+      <Button>Discover more</Button>
+    </div> -->
     </div>
     <div
       class="items-center gap-6 grid grid-cols-1 md:grid-cols-3 col-span-2 mt-24 md:mt-0 text-center"
       role="list"
     >
       {
-        items.map((item) => {
+        itemsSection2.map((item) => {
           const Icon = item.icon;
           return (
-            <div
-              class="relative hover:bg-slate-900! py-16! overflow-hidden hover:text-white transition card card-practices"
-              role="listitem"
-            >
-              <div class="icon" aria-hidden="true">
-                <Icon size={70} />
-              </div>
-              <h4 class="text-2xl text-pretty leading-8">{item.title}</h4>
-              <p>{item.description}</p>
+            <a href={item.link}>
               <div
-                class="-right-10 -bottom-10 absolute opacity-3"
-                aria-hidden="true"
+                class={`relative hover:bg-slate-900! py-16! overflow-hidden hover:text-white transition card card-practices ${item.hidden && "hidden"} shadow-md`}
+                role="listitem"
               >
-                <Icon size={180} color="#000" />
+                <div class="icon" aria-hidden="true">
+                  <Icon size={70} />
+                </div>
+                <h4 class="text-2xl text-pretty leading-8">{item.title}</h4>
+                <div
+                  class="-right-10 -bottom-10 absolute opacity-3"
+                  aria-hidden="true"
+                >
+                  <Icon size={180} color="#000" />
+                </div>
               </div>
-            </div>
+              <div class={`${!item.hidden && "hidden"}`} />
+            </a>
           );
         })
       }

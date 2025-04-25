@@ -1,0 +1,84 @@
+---
+import { Image } from "astro:assets";
+import LayoutServices from "../layouts/LayoutServices.astro";
+import service from "@public/service4.png";
+import Mace from "../components/svg/mace.astro";
+---
+
+<LayoutServices
+  title="Defensa por posesión etc"
+  titlePage="Lexaegis | Defensa en conflictos por posesión, uso o propiedad"
+>
+  <div
+    class="items-center gap-12 grid grid-cols-1 md:grid-cols-2 md:grid-flow-row-dense"
+    role="region"
+    aria-labelledby="service-heading"
+  >
+    <div class="order-2 md:order-1">
+      <span class="flex items-center gap-2 text-xl italic">
+        <span
+          class="flex justify-center items-center bg-primary p-2 rounded-full"
+          aria-hidden="true"
+        >
+          <Mace color="#ffff" size={25} />
+        </span>
+        <span id="service-heading"
+          >asesoría <span class="text-primary italic">legal especializada</span
+          ></span
+        >
+      </span>
+
+      <h2 class="mt-2 font-bold! text-pretty">
+        Defensa en conflictos <span>por posesión,</span> uso o propiedad
+      </h2>
+
+      <p class="my-4">
+        En Lexaegis, entendemos la importancia de proteger los activos y
+        derechos de tu empresa. Por ello, ofrecemos un servicio integral de
+        defensa en conflictos relacionados con la posesión, uso o propiedad de
+        bienes inmuebles. Nuestro equipo de abogados especializados trabaja
+        contigo para analizar a fondo cada situación, identificar riesgos y
+        diseñar estrategias legales personalizadas que salvaguarden los
+        intereses de tu negocio.
+      </p>
+
+      <p class="mb-4">
+        Ya sea que enfrentes disputas por ocupación indebida, problemas con
+        contratos de arrendamiento, o conflictos de propiedad, estamos aquí para
+        brindarte el respaldo legal que necesitas. Nos enfocamos en resolver los
+        conflictos de manera eficiente, minimizando el impacto en tus
+        operaciones y asegurando que tu empresa pueda continuar creciendo sin
+        interrupciones.
+      </p>
+      <p>
+        Además, te asesoramos en la prevención de futuros conflictos mediante la
+        revisión y elaboración de contratos sólidos, así como en la
+        implementación de medidas legales que refuercen la seguridad jurídica de
+        tus bienes. En Lexaegis, nuestra prioridad es proteger lo que has
+        construido, permitiéndote centrarte en el éxito de tu empresa con la
+        tranquilidad de contar con un equipo legal confiable y comprometido.
+      </p>
+      <!-- <ul class="pl-5 list-disc">
+        <li class="flex items-center gap-2">
+          <Check aria-hidden="true" />
+          <span>Te ayudamos a recuperar lo que te pertenece.</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <Check aria-hidden="true" />
+          <span>No es solo dinero. Es tu empresa en riesgo.</span>
+        </li>
+      </ul> -->
+
+      <a href="/#contacto">
+        <button class="bg-slate-800 mt-6 text-white btn">Me interesa</button>
+      </a>
+    </div>
+    <div class="flex order-1 md:order-2">
+      <Image
+        src={service}
+        class="shadow-2xl rounded-md w-[100%]"
+        alt="Imagen representativa sobre servicio"
+      />
+    </div>
+  </div>
+</LayoutServices>
