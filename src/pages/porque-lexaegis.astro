@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+import LayoutServices from "../layouts/LayoutServices.astro";
+import service from "@public/service6.jpg";
+import ShielQuestion from "../components/svg/shielQuestion.astro";
+---
+
+<LayoutServices
+  title="Por qué lexaegis"
+  titlePage="Lexaegis | ¿Por qué Lexaegis?"
+>
+  <div
+    class="items-center gap-12 grid grid-cols-1 md:grid-cols-2 md:grid-flow-row-dense"
+    role="region"
+    aria-labelledby="service-heading"
+  >
+    <div class="order-2 md:order-1">
+      <span class="flex items-center gap-2 text-xl italic">
+        <span
+          class="flex justify-center items-center bg-primary p-2 rounded-full"
+          aria-hidden="true"
+        >
+          <ShielQuestion color="#ffff" size={25} />
+        </span>
+        <span id="service-heading"
+          >asesoría <span class="text-primary italic">legal especializada</span
+          ></span
+        >
+      </span>
+      <h2 class="mt-2 font-bold! text-pretty">
+        ¿porque <span>contratar LexAegis</span> y no un abogado particular?
+      </h2>
+      <p class="my-4">
+        La mayoría de empresas cuentan con sus propios abogados, sin embargo
+        para evitar cualquier filtración de información por posibles amistades o
+        relaciones personales dentro de las empresas, es muy viable que cuenten
+        con el apoyo de un despacho legal externo, para que asi usted evite
+        cualquier problema de fuga de información. Somos un despacho legal
+        sumamente seguro y confidencial en cuanto a cualquiera de nuestros
+        clientes.
+      </p>
+      <a href="/#contacto">
+        <button class="bg-slate-800 mt-6 text-white btn">Me interesa</button>
+      </a>
+    </div>
+    <div class="flex order-1 md:order-2">
+      <Image
+        src={service}
+        class="shadow-2xl rounded-md w-[100%]"
+        alt="Imagen representativa sobre servicio"
+      />
+    </div>
+  </div>
+</LayoutServices>
